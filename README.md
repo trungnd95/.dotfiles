@@ -29,7 +29,22 @@ We cannot beleive anyone even include ourself. So everything needs to be verify 
 
 After that it will create .husky forder that contains all hooks command inside, for example pre-commit, pre-push ...
 
-- After that, we need to add hook command executed to .husky using `lint-staged` or `pretty-quick`
+- After that, we need to add hook command executed to .husky using `lint-staged` or `pretty-quick`. To install `lint-staged`:
+
+```js
+    npm i -D lint-staged
+
+    // Inside package.json
+    "lint-staged":{
+    "**/*.{js,jsx,ts,tsx}":[
+      "prettier --write",
+      "eslint --fix",
+      //"git add"
+    ]
+  }
+```
+
+We could add `lint-staged` command to `package.json` file or custom in `.lintstagedrc.js` file
 
 ## 4. VS Code Configuration
 
