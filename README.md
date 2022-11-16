@@ -29,6 +29,8 @@ We cannot beleive anyone even include ourself. So everything needs to be verify 
 
 After that it will create .husky forder that contains all hooks command inside, for example pre-commit, pre-push ...
 
+- After that, we need to add hook command executed to .husky using `lint-staged` or `pretty-quick`
+
 ## 4. VS Code Configuration
 
 We need some VScode setup to make it helps us run Eslint and prettier automatically. Otherwise, we have to to run `yarn lint` and `prettier --write` normally by hand.
